@@ -64,7 +64,8 @@ void loop() {
     delay(50);
   }
   // save the current state as the last state, for next time through the loop
-  lastButtonState = buttonState;
+  lastButtonState = buttonState; // WITHOUT THIS SWITCH RESET THE VALUE GENERATED WOULD INCREASE INDEFINITELY
+  //instead, the value is read only once 
 
 
   // turns on the LED every four button pushes by checking the modulo of the
